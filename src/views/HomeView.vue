@@ -1,18 +1,28 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <MenuLinks :links="links" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import MenuLinks from "@/components/MenuLinks";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    MenuLinks,
+  },
+  data() {
+    return {
+      links: [
+        {
+          title: "Text Scrambler",
+          href: "/text-scrambler",
+        },
+      ],
+    };
   },
 };
 </script>
