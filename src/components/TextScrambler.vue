@@ -13,7 +13,7 @@
     </button>
     <textarea
       v-show="showHiddenText"
-      v-model="reverseText"
+      v-model="scrambleText"
       name="hidden-text"
       id="hidden-text"
       cols="30"
@@ -35,8 +35,8 @@ export default {
     buttonText() {
       return `${this.showHiddenText ? "Hide" : "Show"} Secret`;
     },
-    reverseText() {
-      return [...this.text].reverse().join("");
+    scrambleText() {
+      return [...this.text].sort(() => 0.5 - Math.random()).join("");
     },
   },
   methods: {
@@ -61,7 +61,14 @@ export default {
   }
 
   &__button {
+    background-color: #42b983;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
     margin: 20px 0;
+    min-height: 30px;
   }
 }
 </style>
