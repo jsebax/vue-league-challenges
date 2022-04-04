@@ -19,6 +19,11 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/TextScramblerView.vue"),
   },
+  {
+    path: "/credit-card",
+    name: "credit card",
+    component: () => import("../views/CreditCardView.vue"),
+  },
 ];
 
 const router = new VueRouter({

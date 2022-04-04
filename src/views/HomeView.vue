@@ -21,6 +21,10 @@ export default {
           title: "Text Scrambler",
           href: "/text-scrambler",
         },
+        {
+          title: "Credit Card",
+          href: "/credit-card",
+        },
       ],
     };
   },
